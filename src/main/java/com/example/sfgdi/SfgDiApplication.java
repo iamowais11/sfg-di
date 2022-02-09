@@ -1,9 +1,6 @@
 package com.example.sfgdi;
 
-import com.example.sfgdi.controllers.ConstructorInjectedController;
-import com.example.sfgdi.controllers.MyController;
-import com.example.sfgdi.controllers.PropertyInjectedController;
-import com.example.sfgdi.controllers.SetterInjectedController;
+import com.example.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -19,7 +16,13 @@ public class SfgDiApplication {
 		System.out.println(greetings);
 
 		//For Primary Service Usage
+		System.out.println("------Primary Service Usage");
 		System.out.println(controller.getGreetings());
+
+		//For Profile Usage if Service have same name
+		System.out.println("------Profile Usage");
+		I18nController i18nController=(I18nController)context.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 
 		//Dependency Injection With Spring Framework
