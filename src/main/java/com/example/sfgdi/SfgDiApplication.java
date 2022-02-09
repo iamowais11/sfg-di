@@ -18,6 +18,9 @@ public class SfgDiApplication {
 		String greetings=controller.sayHello();
 		System.out.println(greetings);
 
+		//For Primary Service Usage
+		System.out.println(controller.getGreetings());
+
 
 		//Dependency Injection With Spring Framework
 		System.out.println("---------- Property ");
