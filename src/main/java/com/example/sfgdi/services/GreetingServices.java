@@ -2,5 +2,5 @@ package com.example.sfgdi.services;
 
 public interface GreetingServices {
 
-     String sayGreetings();
+     String sayGreetings(Object o);
 }
